@@ -1,0 +1,87 @@
+public abstract class Monster{
+    public int health;
+    public int defense;
+    private int smallSpeed,mediumSpeed,largeSpeed,superMassiveSpeed;
+    public int attack;
+    public String size;
+    public String[] loot;
+    public Monster(){
+        health=10;
+        attack=0;
+        defense=0;
+        smallSpeed=15;
+        size="";
+        mediumSpeed=10;
+        largeSpeed=5;
+        superMassiveSpeed=0;
+    }
+
+    public void setHealth(int newHealth){
+        health=newHealth;
+    }
+    
+    public void gainHealth(int healthAdded){
+        health+=healthAdded;
+    }
+
+    public void loseHealth(int healthLost){
+        health-=healthLost;
+    }
+
+    public int getHealth(){
+        return health;
+    }
+
+    public void setAttack(int newAttack){
+        attack=newAttack;
+    }
+
+    public int getAttack(){
+        return attack;
+    }
+
+    public void setDefense(int newDefense){
+        defense=newDefense;
+    }
+
+    public int getDefense(){
+        return defense;
+    }
+
+    public void setSize(String newSize){
+        if(newSize.toLowerCase().equals("small")||newSize.toLowerCase().equals("medium")||newSize.toLowerCase().equals("large")){
+            size=newSize.toLowerCase();
+        }
+    }
+
+    public String getSize(){
+        return size;
+    }
+
+    public int getSpeed(){
+        if(size.equals("small")){
+            return smallSpeed;
+        }
+        else if(size.equals("medium")){
+            return mediumSpeed;
+        }
+        else if(size.equals("large")){
+            return largeSpeed;
+        }
+        else{
+            return superMassiveSpeed;
+        }
+    }
+    
+    public void setLoot(String[] list){
+        loot=new String[list.length];
+        int i=0;
+        for(String s:list){
+            loot[i]=s;
+            i++;
+        }
+    }
+    
+    public abstract void attacked(int damageDealt);
+    public abstract int dealDamage();
+}
