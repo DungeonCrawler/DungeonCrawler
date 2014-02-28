@@ -1,0 +1,31 @@
+public class Rat extends Monster{
+    public Rat(){
+        String[] loot = new String[3];
+        loot[0]="5gp";
+        loot[1]="dagger";
+        loot[2]="AIDS";
+        super.setAttack(1+(int)(Math.random()*5));
+        super.setSize("small");
+        super.setDefense(1+(int)(Math.random()*2));
+        super.setHealth(10);
+        super.setLoot(loot);
+    }
+
+    public void attacked(int damageDealt){
+        damageDealt-=super.getDefense();
+        super.loseHealth(damageDealt);
+        if(super.getHealth()<=0){
+            System.out.println("D-E-D.... DEAD");
+            for(int i=0;i<loot.length;i++){
+                System.out.println(loot[i]);
+            }
+        }
+        else{
+            System.out.println("Squeeeeeeeeaaaak!!!!!!!!!");
+        }
+    }
+
+    public int dealDamage(){
+        return attack+(int)(Math.random()*3);
+    }
+}
