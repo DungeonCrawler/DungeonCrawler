@@ -1,0 +1,23 @@
+public class Titan extends Monster{
+    public Titan(){
+        super.setHealth(500+(int)(Math.random()*10)+(int)(Math.random()*10));
+        super.setAttack(150+(int)(Math.random()*100)+(int)(Math.random()*10));
+        super.setDefense(200+(int)(Math.random()*100)+(int)(Math.random()*10));
+        super.setSize("superMassive");
+    }
+
+    public void attacked(int damageDealt){
+        damageDealt-=super.getDefense();
+        super.loseHealth(damageDealt);
+        if(super.getHealth()<=0){
+            System.out.println("D-E-D.... DEAD");
+        }
+        else{
+            System.out.println("MWAHAHAHAHAHAHAHAAAA PUNY SCUM");
+        }
+    }
+
+    public int dealDamage(){
+        return attack+(int)(Math.random()*5);
+    }
+}
