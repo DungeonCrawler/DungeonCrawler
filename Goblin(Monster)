@@ -1,0 +1,26 @@
+public class Goblin extends Monster{
+    public Goblin(){
+        super.setAttack(5+(int)(Math.random()*5));
+        super.setSize("small");
+        super.setDefense(5+(int)(Math.random()*2));
+        super.setHealth(15);
+    }
+
+    public void attacked(int damageDealt){
+        damageDealt-=super.getDefense();
+        super.loseHealth(damageDealt);
+        if(super.getHealth()<=0){
+            System.out.println("D-E-D.... DEAD");
+            /*for(int i=0;i<loot.length;i++){
+                System.out.println(loot[i]);
+            }*/
+        }
+        else{
+            System.out.println("Squeeeeeeeeaaaak!!!!!!!!!");
+        }
+    }
+
+    public int dealDamage(){
+        return attack+(int)(Math.random()*3);
+    }
+}
