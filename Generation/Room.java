@@ -53,6 +53,14 @@ public class Room
             }
         }
     }
+    public int getIntSize()
+    {
+        if(size==11||size==21)
+        {
+            return size;
+        }
+        return size;
+    }
     public String getSize()
     {
         if(size==11||size==21)
@@ -60,5 +68,37 @@ public class Room
             return ""+size;
         }
         return " "+size;
+    }
+    public String toString()
+    {
+        String[][] sa=new String[11][11];
+        for(int i=0;i<11;i++)
+        {
+            for(int j=0;j<11;j++)
+            {
+                if(getIntSize()>i&&getIntSize()>j)
+                {
+                    sa[i][j]="#";
+                }
+                else
+                {
+                    sa[i][j]=" ";
+                }
+                if(i==5||j==5)
+                {
+                    sa[i][j]="#";
+                }
+            }
+        }
+        String s="";
+        for(int i=0;i<sa.length;i++)
+        {
+            for(int j=0;j<sa[0].length;j++)
+            {
+                s+=sa[i][j];
+            }
+            s+="\n";
+        }
+        return s;
     }
 }

@@ -1,6 +1,6 @@
 public class DrunkenWalkObject
 {
-    public static void main(String[] args)
+    public static String[][] create()
     {
         Room[][] map=new Room[50][50];
         String[][]pMap=new String[50][50];
@@ -67,9 +67,26 @@ public class DrunkenWalkObject
                 }
             }
         }
-    }
-    public static String[][] create()
-    {
-        return null; //implement
+        for(int i=0;i<map.length;i++)
+        {
+            for(int j=0;j<map.length;j++)
+            {
+                if(pMap[i][j].equals("21"))
+                {
+                    if(i==0||j==map.length)
+                    {
+                        pMap[i][j]="11";
+                    }
+                    else
+                    {
+                        pMap[i-1][j]="11";
+                        pMap[i][j]="11";
+                        pMap[i-1][j+1]="11";
+                        pMap[i][j+1]="11";
+                    }
+                }
+            }
+        }
+        return pMap;
     }
 }
