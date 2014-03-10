@@ -1,7 +1,7 @@
 public class Floor
 {
     private int level; //implement with player class
-    private String[][] floor;
+    private Room[][] floor;
     public Floor()
     {
         
