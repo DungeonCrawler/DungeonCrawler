@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=x\ y\ celltype
+comment0.target=void\ setCell(int,\ int,\ int)
+comment1.params=x\ y
+comment1.target=int\ getCell(int,\ int)
+comment2.params=min\ max
+comment2.target=int\ getRand(int,\ int)
+comment3.params=x\ y\ lenght\ direction
+comment3.target=boolean\ makeCorridor(int,\ int,\ int,\ int)
+comment4.params=x\ y\ xlength\ ylength\ direction
+comment4.target=boolean\ makeRoom(int,\ int,\ int,\ int,\ int)
+comment5.params=
+comment5.target=void\ showDungeon()
+comment6.params=inx\ iny\ inobj
+comment6.target=boolean\ createDungeon(int,\ int,\ int)
+numComments=7
