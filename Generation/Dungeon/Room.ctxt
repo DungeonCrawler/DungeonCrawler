@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=r
+comment0.target=Room(int)
+comment1.params=type
+comment1.target=java.lang.String[][]\ roomDraw(int)
+comment2.params=row
+comment2.target=void\ printRow(int)
+comment3.params=
+comment3.target=java.lang.String[][]\ getRoom()
+numComments=4
