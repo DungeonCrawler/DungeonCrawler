@@ -1,3 +1,5 @@
+package Dungeon;
+
 public class GridTester
 {
     public static void main(String[] args)

@@ -1,3 +1,5 @@
+package Dungeon;
+
 public class ArrayGen
 {
     private int[][] map;

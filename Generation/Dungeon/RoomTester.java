@@ -1,3 +1,5 @@
+package Dungeon;
+
 public class RoomTester
 {
     public static void main(String[] args)
@@ -13,7 +15,9 @@ public class RoomTester
                     System.out.print(st);
                 }
                 System.out.println();
+                
             }
+            System.out.println();
         }
     }
 }
