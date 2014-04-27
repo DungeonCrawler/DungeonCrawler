@@ -7,7 +7,10 @@ public class Room
     {
         roomDraw(r);
     }
-
+    public Room()
+    {
+        roomDraw(-1);
+    }
     public String[][] roomDraw(int type)
     {
         String[][] newRoom=new String[11][11];
@@ -19,6 +22,10 @@ public class Room
         {
             for(int j=0;j<11;j++)
             {
+                if(type==-1)
+                {
+                    newRoom[i][j]=" ";
+                }
                 if(type==0)
                 {
                     if((i==0||i==10||j==0||j==10)&&(i!=5&&j!=5))
@@ -117,6 +124,34 @@ public class Room
                         newRoom[i][j]="#";
                     }
                     
+                }
+                if(type==9)
+                {
+                    if(i>=6||j>=6)
+                    {
+                        newRoom[i][j]="#";
+                    }
+                }
+                if(type==10)
+                {
+                    if(i>=6||j<=4)
+                    {
+                        newRoom[i][j]="#";
+                    }
+                }
+                if(type==11)
+                {
+                    if(i<=4||j<=4)
+                    {
+                        newRoom[i][j]="#";
+                    }
+                }
+                if(type==12)
+                {
+                    if(i<=4||j>=6)
+                    {
+                        newRoom[i][j]="#";
+                    }
                 }
             }
         }

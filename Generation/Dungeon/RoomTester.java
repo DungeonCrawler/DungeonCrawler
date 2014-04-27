@@ -5,7 +5,7 @@ public class RoomTester
     public static void main(String[] args)
     {
         
-        for(int i=0;i<9;i++)
+        for(int i=0;i<13;i++)
         {
             Room r=new Room(i);
             for(String[] s:r.getRoom())
@@ -16,7 +16,9 @@ public class RoomTester
                 }
                 System.out.println();
                 
+                
             }
+            System.out.println();
             System.out.println();
         }
     }

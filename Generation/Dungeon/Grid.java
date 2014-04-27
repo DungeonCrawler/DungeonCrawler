@@ -17,7 +17,7 @@ public class Grid
         {
             for(int j=0;j<size;j++)
             {
-                int rand=(int)(Math.random()*9);
+                int rand=(int)(Math.random()*13);
                 map[i][j]=new Room(rand);
             }
         }
@@ -25,7 +25,7 @@ public class Grid
 
     public void printMap()
     {
-        
+
         for(int i=0;i<size;i++)
         {
             for(int j=0;j<11;j++)
@@ -36,8 +36,17 @@ public class Grid
                 }
                 System.out.println();
             }
-            
-            
+
         }
+    }
+
+    public Room[][] getGrid()
+    {
+        return map;
+    }
+
+    public void setMap(Room[][] newMap)
+    {
+        map=newMap;
     }
 }
