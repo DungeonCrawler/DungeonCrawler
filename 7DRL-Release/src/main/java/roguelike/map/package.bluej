@@ -1,9 +1,12 @@
 #BlueJ package file
+dependency1.from=TranslatedMapView
+dependency1.to=MapView
+dependency1.type=UsesDependency
 package.editor.height=400
 package.editor.width=560
 package.editor.x=32
 package.editor.y=32
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=3
 package.showExtends=true
 package.showUses=true

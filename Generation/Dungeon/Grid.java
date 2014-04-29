@@ -44,7 +44,10 @@ public class Grid
     {
         return map;
     }
-
+    public int getSize()
+    {
+        return size;
+    }
     public void setMap(Room[][] newMap)
     {
         map=newMap;

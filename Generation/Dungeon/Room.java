@@ -3,8 +3,10 @@ package Dungeon;
 public class Room
 {
     private String[][]room;
+    private int[] doorsOpen;//n,e,s,w 0=open 1=closed
     public Room(int r)
     {
+        doorsOpen=new int[4];
         roomDraw(r);
     }
     public Room()
@@ -166,7 +168,30 @@ public class Room
             System.out.print(s);
         }
     }
-
+    public void closeDoors(int y, int x, int size)
+    {
+        size-=1;
+        if(y-1<0)
+        {
+            doorsOpen[0]=1;
+            room[0][5]="#";
+        }
+        if(x-1<0)
+        {
+            doorsOpen[3]=1;
+            room[5][0]="#";
+        }
+        if(y+1>size)
+        {
+            doorsOpen[2]=1;
+            room[10][5]="#";
+        }
+        if(x+1>size)
+        {
+            doorsOpen[1]=1;
+            room[5][10]="#";
+        }
+    }
     public String[][] getRoom()
     {
         return room;

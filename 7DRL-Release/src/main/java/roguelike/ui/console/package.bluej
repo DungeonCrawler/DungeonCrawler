@@ -2,11 +2,14 @@
 dependency1.from=Console
 dependency1.to=Key
 dependency1.type=UsesDependency
+dependency2.from=Console
+dependency2.to=Color
+dependency2.type=UsesDependency
 package.editor.height=400
 package.editor.width=560
 package.editor.x=52
 package.editor.y=52
-package.numDependencies=1
+package.numDependencies=2
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
