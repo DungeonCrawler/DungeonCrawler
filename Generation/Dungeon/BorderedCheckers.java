@@ -1,6 +1,6 @@
 package Dungeon;
 
-public class BorderedCheckers
+public class BorderedCheckers extends Grid
 {
     private Room[][] map;
     private int size;
@@ -8,11 +8,11 @@ public class BorderedCheckers
     private int[] typesAvailable;
     public BorderedCheckers(int newSize)
     {
+        super(newSize);
         size=newSize;
         map=new Room[size][size];
         mapDraw();
-        typesAvailable=checkTypes();
-        //fillHoles();
+        fillHoles();
     }
 
     public void mapDraw()
@@ -27,7 +27,10 @@ public class BorderedCheckers
                     {
                         int rand=(int)(Math.random()*9);
                         map[i][j]=new Room(rand);
-                        map[i][j].closeDoors(i,j,size);
+                        if(i==0||j==0||i==size-1||j==size-1)
+                        {
+                            map[i][j].closeDoors(i,j,size, this);
+                        }
                     }
                     else
                     {
@@ -40,6 +43,10 @@ public class BorderedCheckers
                     {
                         int rand=(int)(Math.random()*9);
                         map[i][j]=new Room(rand);
+                        if(i==0||j==0||i==size-1||j==size-1)
+                        {
+                            map[i][j].closeDoors(i,j,size, this);
+                        }
                     }
                     else
                     {
@@ -66,12 +73,39 @@ public class BorderedCheckers
 
         }
     }
-    
-    public int[] checkTypes()
+
+    public void fillHoles()
     {
-        int[] available=new int[ALL_TYPES.length];
-        int[] notAvailable=new int[ALL_TYPES.length];
-        //if(map[)
-        return available;
+        for(int i=0;i<size;i++)
+        {
+            for(int j=0;j<size;j++)
+            {
+                if(i%2==1)
+                {
+                    if(j%2==1)
+                    {
+                        int rand=(int)(Math.random()*9);
+                        map[i][j]=new Room(rand);
+                        map[i][j].closeDoors(i,j,size, this);
+                    }
+                    else
+                    {
+                        map[i][j]=new Room();
+                    }
+                }
+                else
+                {
+                    if(j%2==0)
+                    {
+                        int rand=(int)(Math.random()*9);
+                        map[i][j]=new Room(rand);
+                    }
+                    else
+                    {
+                        map[i][j]=new Room();
+                    }
+                }
+            }
+        }
     }
 }

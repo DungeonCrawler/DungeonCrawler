@@ -1,11 +1,12 @@
 package Dungeon;
 
-public class CheckersGrid
+public class CheckersGrid extends Grid
 {
     private Room[][] map;
     private int size;
     public CheckersGrid(int newSize)
     {
+        super(newSize);
         size=newSize;
         map=new Room[size][size];
         mapDraw();

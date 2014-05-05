@@ -168,7 +168,7 @@ public class Room
             System.out.print(s);
         }
     }
-    public void closeDoors(int y, int x, int size)
+    public void closeDoors(int y, int x, int size, Grid g)
     {
         size-=1;
         if(y-1<0)
@@ -190,6 +190,26 @@ public class Room
         {
             doorsOpen[1]=1;
             room[5][10]="#";
+        }
+        if(x!=0&&g.getGrid()[x-1][y].getRoom()[10][5].equals("#"))
+        {
+            doorsOpen[0]=1;
+            room[0][5]="#";
+        }
+        if(y!=size&&g.getGrid()[x][y+1].getRoom()[5][0].equals("#"))
+        {
+            doorsOpen[1]=1;
+            room[5][10]="#";
+        }
+        if(x!=size&&g.getGrid()[x+1][y].getRoom()[0][5].equals("#"))
+        {
+            doorsOpen[2]=1;
+            room[10][5]="#";
+        }
+        if(y!=0&&g.getGrid()[x][y-1].getRoom()[5][10].equals("#"))
+        {
+            doorsOpen[3]=1;
+            room[5][0]="#";
         }
     }
     public String[][] getRoom()

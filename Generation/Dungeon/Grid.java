@@ -19,6 +19,7 @@ public class Grid
             {
                 int rand=(int)(Math.random()*13);
                 map[i][j]=new Room(rand);
+                
             }
         }
     }
