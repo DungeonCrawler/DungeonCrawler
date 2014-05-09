@@ -191,22 +191,22 @@ public class Room
             doorsOpen[1]=1;
             room[5][10]="#";
         }
-        if(x!=0&&g.getGrid()[x-1][y].getRoom()[10][5].equals("#"))
+        if(x!=0&&g.getGrid()[x-1][y]!=null&&g.getGrid()[x-1][y].getRoom()[10][5].equals("#"))
         {
             doorsOpen[0]=1;
             room[0][5]="#";
         }
-        if(y!=size&&g.getGrid()[x][y+1].getRoom()[5][0].equals("#"))
+        if(y!=size&&g.getGrid()[x][y+1]!=null&&g.getGrid()[x][y+1].getRoom()[5][0].equals("#"))
         {
             doorsOpen[1]=1;
             room[5][10]="#";
         }
-        if(x!=size&&g.getGrid()[x+1][y].getRoom()[0][5].equals("#"))
+        if(x!=size&&g.getGrid()[x+1][y]!=null&&g.getGrid()[x+1][y].getRoom()[0][5].equals("#"))
         {
             doorsOpen[2]=1;
             room[10][5]="#";
         }
-        if(y!=0&&g.getGrid()[x][y-1].getRoom()[5][10].equals("#"))
+        if(y!=0&&g.getGrid()[x][y-1]!=null&&g.getGrid()[x][y-1].getRoom()[5][10].equals("#"))
         {
             doorsOpen[3]=1;
             room[5][0]="#";

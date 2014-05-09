@@ -80,7 +80,7 @@ public class BorderedCheckers extends Grid
         {
             for(int j=0;j<size;j++)
             {
-                if(i%2==1)
+                if(i%2==0)
                 {
                     if(j%2==1)
                     {
@@ -88,10 +88,7 @@ public class BorderedCheckers extends Grid
                         map[i][j]=new Room(rand);
                         map[i][j].closeDoors(i,j,size, this);
                     }
-                    else
-                    {
-                        map[i][j]=new Room();
-                    }
+                    
                 }
                 else
                 {
@@ -100,10 +97,7 @@ public class BorderedCheckers extends Grid
                         int rand=(int)(Math.random()*9);
                         map[i][j]=new Room(rand);
                     }
-                    else
-                    {
-                        map[i][j]=new Room();
-                    }
+                    
                 }
             }
         }
