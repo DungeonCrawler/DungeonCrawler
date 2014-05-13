@@ -1,32 +1,35 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Player
 {
     private int hp;
     private int strength;
     private int agility;
     private int smarts;
-    public Player()
+    private String job;
+    public Player(String s)
     {
+        job=s;
     }
-    public void getStats(String s)
+    public void getStats()
     {
-        s=s.toLowerCase();
+        job=job.toLowerCase();
         strength=(int)(Math.random()*5)+5;
         agility=(int)(Math.random()*5)+3;
         smarts=(int)(Math.random()*5)+2;
-        if(s.equals("m"))
+        if(job.equals("m"))
         {
             smarts+=5;
             strength-=2;
             System.out.println("Class: Mage");
         }
-        if(s.equals("w"))
+        if(job.equals("w"))
         {
             strength+=5;
             smarts-=2;
             System.out.println("Class: Warrior");
         }
-        if(s.equals("r"))
+        if(job.equals("r"))
         {
             agility+=3;
             strength+=2;
@@ -37,6 +40,29 @@ public class Player
         System.out.println("Strength: " + strength);
         System.out.println("Agility: " + agility);
         System.out.println("Intelligence: " + smarts);
+    }
+    public ArrayList<String> startInventory()
+    {
+        ArrayList<String> inventory=new ArrayList<String>();
+        if(job.equals("m"))
+        {
+            inventory.add("Initiate Robe");
+            inventory.add("Beginner's Staff");
+            inventory.add("Spell Tome:Fireball");
+        }
+        if(job.equals("w"))
+        {
+            inventory.add("Chain Mail");
+            inventory.add("Shortsword");
+        }
+        if(job.equals("r"))
+        {
+            inventory.add("Leather Armor");
+            inventory.add("Dagger");
+            inventory.add("Bow");
+            //add ammo
+        }
+        return inventory;
     }
     public boolean canSee(String[][] see)
     {
