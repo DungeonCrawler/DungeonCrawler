@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=
-comment0.target=java.lang.String\ toString()
+comment0.target=java.lang.String\ element()
 comment1.params=
 comment1.target=int\ damage()
 numComments=2

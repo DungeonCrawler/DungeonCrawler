@@ -1,6 +1,10 @@
 package ItemList;
 import java.util.ArrayList;
-public interface Item
+public abstract class Item
 {
-    String toString();
+    public String toString()
+    {
+        return getName();
+    }
+    public abstract String getName();
 }
