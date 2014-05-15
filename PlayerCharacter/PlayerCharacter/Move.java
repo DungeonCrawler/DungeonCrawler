@@ -1,4 +1,4 @@
-//package Generation
+package PlayerCharacter;
 public class Move
 {    
     public boolean canMove(/*Tile[][] map, int dir*/String[][] map)

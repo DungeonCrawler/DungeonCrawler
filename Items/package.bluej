@@ -1,3 +1,16 @@
 #BlueJ package file
-#Thu May 15 13:21:36 EDT 2014
+package.editor.height=400
+package.editor.width=560
+package.editor.x=691
+package.editor.y=304
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+target1.height=62
+target1.name=ItemList
+target1.type=PackageTarget
+target1.width=80
+target1.x=50
+target1.y=70
