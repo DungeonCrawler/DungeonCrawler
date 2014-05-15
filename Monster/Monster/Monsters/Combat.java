@@ -1,8 +1,7 @@
 package Monsters;
 
-import DungeonCrawler.PlayerCharacter.*;
 
-public class Combat{
+/*public class Combat{
 
     public Combat(Monster monster, Player player)
     {
@@ -15,4 +14,4 @@ public class Combat{
         }
         if(true){}
     }
-} 
+} */
