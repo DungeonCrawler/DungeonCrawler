@@ -6,14 +6,14 @@ public class Player
     private int strength;
     private int agility;
     private int smarts;
+    private int defense;
     private String job;
     public Player(String s)
     {
-        job=s;
+        job=s.toLowerCase();
     }
     public void getStats()
     {
-        job=job.toLowerCase();
         strength=(int)(Math.random()*5)+5;
         agility=(int)(Math.random()*5)+3;
         smarts=(int)(Math.random()*5)+2;
@@ -21,18 +21,21 @@ public class Player
         {
             smarts+=5;
             strength-=2;
+            defense=4;
             System.out.println("Class: Mage");
         }
         if(job.equals("w"))
         {
             strength+=5;
             smarts-=2;
+            defense=6;
             System.out.println("Class: Warrior");
         }
         if(job.equals("r"))
         {
             agility+=3;
             strength+=2;
+            defense=5;
             System.out.println("Class: Rogue");
         }
         hp=(strength/2)+2;
@@ -63,6 +66,26 @@ public class Player
             //add ammo
         }
         return inventory;
+    }
+    public String getJob()
+    {
+        return job;
+    }
+    public int getHP()
+    {
+        return hp;    
+    }
+    public int getStrength()
+    {
+        return strength;
+    }
+    public int getAgility()
+    {
+        return agility;
+    }
+    public int getSmarts()
+    {
+        return smarts;
     }
     public boolean canSee(String[][] see)
     {
