@@ -1,3 +1,4 @@
+package Monsters;
 public class Titan extends Monster{
     public Titan(){
         super.setHealth(500+(int)(Math.random()*10)+(int)(Math.random()*10));

@@ -1,9 +1,10 @@
-public class Orc extends Monster{
-    public Orc(){
-        super.setHealth(20+(int)(Math.random()*10));
+package Monsters;
+public class Zombie extends Monster{
+    public Zombie(){
         super.setStrength(10+(int)(Math.random()*5));
         super.setDefense(5+(int)(Math.random()*5));
         super.setSize("medium");
+        super.setHealth(super.getStrength()/2);
     }
 
     public void attacked(int damageDealt){
@@ -13,10 +14,10 @@ public class Orc extends Monster{
             System.out.println("D-E-D.... DEAD");
         }
         else{
-            System.out.println("Urghhh!!");
+            System.out.println("EEHHHHHHHhhhhhhhhh T-T");
         }
     }
-    
+
     public int dealDamage(){
         return super.getStrength()/2+(int)(Math.random()*5);
     }

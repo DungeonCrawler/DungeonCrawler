@@ -1,3 +1,4 @@
+package Monsters;
 public class Troll extends Monster{
     public Troll(){
         super.setHealth(50+(int)(Math.random()*10));

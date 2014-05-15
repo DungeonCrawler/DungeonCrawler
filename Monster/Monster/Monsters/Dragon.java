@@ -1,3 +1,4 @@
+package Monsters;
 public class Dragon extends Monster{
     public Dragon(){
         super.setStrength(1000+(int)(Math.random()*10)+(int)(Math.random()*100)+(int)(Math.random()*1000));

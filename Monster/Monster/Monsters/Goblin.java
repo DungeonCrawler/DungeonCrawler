@@ -1,3 +1,4 @@
+package Monsters;
 public class Goblin extends Monster{
     public Goblin(){
         super.setStrength(5+(int)(Math.random()*3));

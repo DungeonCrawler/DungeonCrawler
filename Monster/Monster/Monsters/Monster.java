@@ -1,3 +1,4 @@
+ package Monsters; 
 public abstract class Monster{
     private int health;
     private int defense;
@@ -7,8 +8,8 @@ public abstract class Monster{
     private String[] loot;
     public Monster(){
         health=strength/2;
-        strength=0;
-        defense=0;
+        strength=2;
+        defense=2;
         smallAgility=1;
         size="";
         mediumAgility=5;

@@ -1,3 +1,4 @@
+package Monsters;
 public class GiantRat extends Monster{
     public GiantRat(){
         String[] loot = new String[3];
