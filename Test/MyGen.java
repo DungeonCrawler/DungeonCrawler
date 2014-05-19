@@ -32,6 +32,16 @@ public class MyGen
         generate();
     }
 
+    public int getCell(int x, int y)
+    {
+        return map[x][y];
+    }
+
+    public void setCell(int x, int y, int type)
+    {
+        map[x][y]=type;
+    }
+
     public void generate()
     {
         int size=map.length;
@@ -47,7 +57,29 @@ public class MyGen
         int count=1;
         while(count<num)
         {
-            
+            int x=(int)Math.random()*map.length;
+            int y=(int)Math.random()*map.length;
+            while(getCell(y,x)==tileFloor)
+            {
+                int yOrX=(int)(Math.random()*2);
+                if(yOrX==1)
+                {
+                    x++;
+                }
+                else
+                {
+                    y++;
+                }
+                if(y>=map.length||x>=map.length)
+                {
+                    break;
+                }
+            }    
+            if(makeRoom(x,y))
+            {
+                count++;
+            }
+
         }
     }
 
@@ -79,17 +111,122 @@ public class MyGen
             System.out.println();
         }
     }
-    
-    public void makeRoom(int x,int y)
+
+    public boolean makeRoom(int x,int y)
     {
         int dir=(int)(Math.random()*4);
+        int size=(int)(Math.random()*7)+8;
         switch(dir)
         {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
+            case 0://n
+            for(int i=y;i>y-size;i--)
+            {
+                if(i<0||i>map.length)
+                {
+                    return false;
+                }
+                for(int j=(x-size/2);j<x+(size+1)/2;j++)
+                {
+                    if(j<0||j>map.length)
+                    {
+                        return false;
+                    }
+                    if(getCell(i,j)!=tileWall)
+                    {
+                        return false;
+                    }
+                }
+            }
+            for(int i=y;i>y-size;i--)
+            {
+                for(int j=(x-size/2);j<x+(size+1)/2;j++)
+                {
+                    if (j == (x-size/2)) setCell(j, i, tileWall);
+					else if (xtemp == (x+(xlen-1)/2)) setCell(xtemp, ytemp, tileWall);
+					else if (ytemp == y) setCell(xtemp, ytemp, tileWall);
+					else if (ytemp == (y-ylen+1)) setCell(xtemp, ytemp, tileWall);
+					else setCell(j, i, tileFloor);
+                }
+            }
+            case 1://e
+            for(int i=y-size/2;i<y+(size+1)/2;i++)
+            {
+                if(i<0||i>map.length)
+                {
+                    return false;
+                }
+                for(int j=x;j<x+size;j++)
+                {
+                    if(j<0||j>map.length)
+                    {
+                        return false;
+                    }
+                    if(getCell(i,j)!=tileWall)
+                    {
+                        return false;
+                    }
+                }
+            }
+            for(int i=y-size/2;i<y+(size+1)/2;i++)
+            {
+                for(int j=x;j<x+size;j++)
+                {
+
+                }
+            }
+            case 2://s
+            for(int i=y;i>y+size;i++)
+            {
+                if(i<0||i>map.length)
+                {
+                    return false;
+                }
+                for(int j=(x-size/2);j<x+(size+1)/2;j++)
+                {
+                    if(j<0||j>map.length)
+                    {
+                        return false;
+                    }
+                    if(getCell(i,j)!=tileWall)
+                    {
+                        return false;
+                    }
+                }
+            }
+            for(int i=y;i>y+size;i++)
+            {
+                for(int j=(x-size/2);j<x+(size+1)/2;j++)
+                {
+
+                }
+            }
+            case 3://w
+            for(int i=y-size/2;i>y-size;i++)
+            {
+                if(i<0||i>map.length)
+                {
+                    return false;
+                }
+                for(int j=(x-size);j<x;j++)
+                {
+                    if(j<0||j>map.length)
+                    {
+                        return false;
+                    }
+                    if(getCell(i,j)!=tileWall)
+                    {
+                        return false;
+                    }
+                }
+            }
+            for(int i=y-size/2;i>y-size;i++)
+            {
+                for(int j=(x-size);j<x;j++)
+                {
+
+                }
+            }
         }
-        
+
     }
 }

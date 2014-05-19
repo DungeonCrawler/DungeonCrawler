@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=type
+comment0.target=Tile(int)
+comment1.params=
+comment1.target=boolean\ canMove()
+comment2.params=
+comment2.target=boolean\ canSee()
+numComments=3
