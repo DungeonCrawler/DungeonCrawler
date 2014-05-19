@@ -1,18 +1,18 @@
 package ItemList;
-public class Shortsword extends Weapon
+public class Staff extends Weapon
 {
     public String getName()
     {
-        return "Shortsword: Str:4, Agi:4";
+        return "Staff: Str:2, Agi:1";
     }
     public int damage()
     {
-        int damage=(int)(Math.random()*3)+2;
+        int damage=(int)(Math.random()*2)+1;
         return damage;
     }
     public boolean canWield()
     {
-        if(p.getStrength()>=4&&p.getAgility()>=4)
+        if(p.getStrength()>=2&&p.getAgility()>=1)
         {
             return true;
         }

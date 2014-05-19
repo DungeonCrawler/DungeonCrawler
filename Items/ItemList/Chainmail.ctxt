@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=java.lang.String\ getName()
+comment1.params=
+comment1.target=int\ defense()
+comment2.params=
+comment2.target=int\ fireResist()
+comment3.params=
+comment3.target=int\ coldResist()
+comment4.params=
+comment4.target=int\ necroResist()
+comment5.params=
+comment5.target=int\ holyResist()
+numComments=6

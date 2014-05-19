@@ -1,18 +1,18 @@
 package ItemList;
-public class Shortsword extends Weapon
+public class DoubleDaggers extends Weapon
 {
     public String getName()
     {
-        return "Shortsword: Str:4, Agi:4";
+        return "Dual Daggers: Str:4, Agi:12";
     }
     public int damage()
     {
-        int damage=(int)(Math.random()*3)+2;
+        int damage=(int)(Math.random()*3)+6;
         return damage;
     }
     public boolean canWield()
     {
-        if(p.getStrength()>=4&&p.getAgility()>=4)
+        if(p.getStrength()>=4&&p.getAgility()>=12)
         {
             return true;
         }

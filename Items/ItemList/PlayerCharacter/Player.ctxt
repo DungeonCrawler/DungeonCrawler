@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=s
+comment0.target=Player(java.lang.String)
+comment1.params=
+comment1.target=void\ getStats()
+comment2.params=
+comment2.target=java.util.ArrayList\ startInventory()
+comment3.params=
+comment3.target=java.lang.String\ getJob()
+comment4.params=
+comment4.target=int\ getHP()
+comment5.params=
+comment5.target=int\ getStrength()
+comment6.params=
+comment6.target=int\ getAgility()
+comment7.params=
+comment7.target=int\ getSmarts()
+numComments=8

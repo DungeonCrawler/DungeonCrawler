@@ -1,16 +1,16 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=814
-package.editor.y=243
+package.editor.x=703
+package.editor.y=335
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
 target1.editor.height=700
 target1.editor.width=900
-target1.editor.x=325
-target1.editor.y=141
+target1.editor.x=388
+target1.editor.y=151
 target1.height=50
 target1.name=Player
 target1.naviview.expanded=false
