@@ -4,7 +4,7 @@ public class Floor extends Tile
 {
     public Floor()
     {
-        super(1);
+        
     }
     public boolean canMove()
     {
@@ -16,6 +16,10 @@ public class Floor extends Tile
     }
     public String toString()
     {
-        return " ";
+        if(getEntity()==null)
+        {
+            return " ";
+        }
+        return entityString();
     }
 }
