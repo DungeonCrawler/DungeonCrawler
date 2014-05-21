@@ -1,6 +1,5 @@
 package Dungeon;
-
-
+import java.util.Scanner;
 
 public class TileTester
 {
@@ -23,7 +22,8 @@ public class TileTester
         }
         int row=(int)(Math.random()*4)+1;
         int col=(int)(Math.random()*4)+1;
-        map[row][col].setEntity(new Entity(map,row,col));
+        Entity e=new Entity(map,row,col);
+        map[row][col].setEntity(e);
         for(int i=0;i<map.length;i++)
         {
             for(int j=0;j<map.length;j++)
@@ -31,6 +31,20 @@ public class TileTester
                System.out.print(map[i][j].toString());
             }
             System.out.println();
+        }
+        Scanner s=new Scanner(System.in);
+        while(true)
+        {
+            int next=s.nextInt();
+            e.move(next);
+            for(int i=0;i<map.length;i++)
+            {
+                for(int j=0;j<map.length;j++)
+                {
+                    System.out.print(map[i][j].toString());
+                }
+                System.out.println();
+            }
         }
     }
 }

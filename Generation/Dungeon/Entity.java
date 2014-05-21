@@ -63,7 +63,7 @@ public class Entity
         }
         if(dir==1)
         {
-            if(myY!=grid.length&&grid[myX][myY-+1].canMove())
+            if(myY!=grid.length&&grid[myX][myY+1].canMove())
             {
                 return true;
             }
