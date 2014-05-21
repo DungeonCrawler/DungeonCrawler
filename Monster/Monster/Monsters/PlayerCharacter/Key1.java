@@ -1,3 +1,5 @@
+package Monsters.PlayerCharacter;
+
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -24,7 +26,7 @@ public class Key1 extends JFrame implements KeyListener{
 
     public void keyPressed(KeyEvent e){
 
-        System.out.println("Key Pressed!!!");
+        //System.out.println("Key Pressed!!!");
 
 
         if(e.getKeyCode()==27) {//check if the Keycode is 27 which is esc
@@ -35,13 +37,33 @@ public class Key1 extends JFrame implements KeyListener{
 
         }
 
+        if(e.getKeyCode()==37){
+            //set direction left
+            System.out.println("LEFT");
+            //entity.move(3);
+        }
+        if(e.getKeyCode()==39){
+            //set direction right
+            System.out.println("RIGHT");
+            //entity.move(1);
+        }
+        if(e.getKeyCode()==40){
+            //set direction down
+            System.out.println("DOWN");
+            //entity.move(2);
+        }
+        if(e.getKeyCode()==38){
+            //set direction up
+            System.out.println("UP");
+            //entity.move(0);
+        }
     }
 
     //Called when the key is released  
 
     public void keyReleased(KeyEvent e){
 
-        System.out.println("Key Released!!!");
+        //System.out.println("Key Released!!!");
 
         KeyCodeT.setText("Key Code:" + e.getKeyCode());//displays the key code in the text box
 

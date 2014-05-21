@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=sizes
+comment0.target=MapGen(int[][])
+comment1.params=
+comment1.target=void\ rooms()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

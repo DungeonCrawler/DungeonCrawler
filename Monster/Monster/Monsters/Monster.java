@@ -1,5 +1,6 @@
  package Monsters; 
-public abstract class Monster{
+ import Dungeon.*;
+public abstract class Monster /*extends Entity*/{
     private int health;
     private int defense;
     private int smallAgility,mediumAgility,largeAgility,superMassiveAgility;

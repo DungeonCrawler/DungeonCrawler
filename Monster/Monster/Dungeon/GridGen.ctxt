@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GridGen()
+comment1.params=newSize
+comment1.target=GridGen(int)
+comment2.params=
+comment2.target=void\ mapDraw()
+comment3.params=
+comment3.target=void\ printMap()
+numComments=4

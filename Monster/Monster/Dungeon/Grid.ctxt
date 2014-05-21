@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=newSize
+comment0.target=Grid(int)
+comment1.params=
+comment1.target=void\ mapDraw()
+comment2.params=
+comment2.target=void\ printMap()
+comment3.params=
+comment3.target=Room[][]\ getGrid()
+comment4.params=
+comment4.target=int\ getSize()
+comment5.params=newMap
+comment5.target=void\ setMap(Room[][])
+numComments=6
