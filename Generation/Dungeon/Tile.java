@@ -2,11 +2,22 @@ package Dungeon;
 
 public abstract class Tile
 {
-    private int type;
-    public Tile(int type)
-    {
-        this.type=type;
+    private Entity occupant;
+    public Tile()
+    {   
     }
     public abstract boolean canMove();
     public abstract boolean canSee();
+    public void setEntity(Entity thing)
+    {
+        occupant=thing;
+    }
+    public Entity getEntity()
+    {
+        return occupant;
+    }
+    public String entityString()
+    {
+        return occupant.toString();
+    }
 }

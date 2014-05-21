@@ -4,18 +4,22 @@ public class Floor extends Tile
 {
     public Floor()
     {
-        super(1);
+        
     }
-    public void canMove()
+    public boolean canMove()
     {
         return true;
     }
-    public void canSee()
+    public boolean canSee()
     {
         return true;
     }
     public String toString()
     {
-        return " ";
+        if(getEntity()==null)
+        {
+            return " ";
+        }
+        return entityString();
     }
 }
