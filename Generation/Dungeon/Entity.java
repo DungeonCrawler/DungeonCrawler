@@ -7,9 +7,11 @@ public class Entity
     private Tile[][] grid;
     private int myX;
     private int myY;
-    public Entity(Tile[][] map)
+    public Entity(Tile[][] map, int row, int col)
     {
         map=grid;
+        myX=col;
+        myY=row;
     }
     public String toString()
     {

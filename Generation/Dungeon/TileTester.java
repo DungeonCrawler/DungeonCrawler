@@ -23,7 +23,7 @@ public class TileTester
         }
         int row=(int)(Math.random()*4)+1;
         int col=(int)(Math.random()*4)+1;
-        map[row][col].setEntity(new Entity(map));
+        map[row][col].setEntity(new Entity(map,row,col));
         for(int i=0;i<map.length;i++)
         {
             for(int j=0;j<map.length;j++)
