@@ -32,7 +32,8 @@ public class TileTester
             }
             System.out.println();
         }
-        Scanner s=new Scanner(System.in);
+        Key1 k=new Key1(e,map);
+        /*Scanner s=new Scanner(System.in);
         while(true)
         {
             int next=s.nextInt();
@@ -45,6 +46,6 @@ public class TileTester
                 }
                 System.out.println();
             }
-        }
+        }*/
     }
 }
