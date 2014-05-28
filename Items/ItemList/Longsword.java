@@ -10,15 +10,16 @@ public class Longsword extends Weapon
         int damage=(int)(Math.random()*3)+3;
         return damage;
     }
-    public boolean canWield()
+     public int reqStr()
     {
-        if(p.getStrength()>=7&&p.getAgility()>=5)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return 7;
+    }
+    public int reqAgi()
+    {
+        return 5;
+    }
+     public int reqInt()
+    {
+        return 0;
     }
 }

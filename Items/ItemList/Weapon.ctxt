@@ -2,5 +2,9 @@
 comment0.params=
 comment0.target=int\ damage()
 comment1.params=
-comment1.target=boolean\ canWield()
-numComments=2
+comment1.target=int\ reqStr()
+comment2.params=
+comment2.target=int\ reqAgi()
+comment3.params=
+comment3.target=java.lang.String\ type()
+numComments=4

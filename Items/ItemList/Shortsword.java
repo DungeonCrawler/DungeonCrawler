@@ -10,15 +10,16 @@ public class Shortsword extends Weapon
         int damage=(int)(Math.random()*3)+2;
         return damage;
     }
-    public boolean canWield()
+    public int reqStr()
     {
-        if(p.getStrength()>=4&&p.getAgility()>=4)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return 4;
+    }
+    public int reqAgi()
+    {
+        return 4;
+    }
+    public int reqInt()
+    {
+        return 0;
     }
 }

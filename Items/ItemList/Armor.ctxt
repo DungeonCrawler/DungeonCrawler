@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=int\ necroResist()
 comment4.params=
 comment4.target=int\ holyResist()
-numComments=5
+comment5.params=
+comment5.target=java.lang.String\ type()
+numComments=6

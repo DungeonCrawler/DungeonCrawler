@@ -1,8 +1,14 @@
 #BlueJ class context
-comment0.params=pl
-comment0.target=Item(PlayerCharacter.Player)
+comment0.params=
+comment0.target=java.lang.String\ toString()
 comment1.params=
-comment1.target=java.lang.String\ toString()
+comment1.target=java.lang.String\ getName()
 comment2.params=
-comment2.target=java.lang.String\ getName()
-numComments=3
+comment2.target=java.lang.String\ type()
+comment3.params=
+comment3.target=int\ reqStr()
+comment4.params=
+comment4.target=int\ reqAgi()
+comment5.params=
+comment5.target=int\ reqInt()
+numComments=6
