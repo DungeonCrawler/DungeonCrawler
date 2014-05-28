@@ -9,9 +9,9 @@ public class Entity
     private int myY;
     public Entity(Tile[][] map, int row, int col)
     {
-        map=grid;
-        myX=col;
-        myY=row;
+        grid=map;
+        myX=row;
+        myY=col;
     }
     public String toString()
     {
@@ -25,6 +25,7 @@ public class Entity
             {
                 grid[myX][myY].setEntity(null);
                 grid[myX-1][myY].setEntity(this);
+                myX--;
             }
         }
         if(num==1)//e
@@ -33,6 +34,7 @@ public class Entity
             {
                 grid[myX][myY].setEntity(null);
                 grid[myX][myY+1].setEntity(this);
+                myY++;
             }
         }
         if(num==2)//s
@@ -41,6 +43,7 @@ public class Entity
            {
                grid[myX][myY].setEntity(null);
                grid[myX+1][myY].setEntity(this);
+               myX++;
            }
         }
         if(num==3)//w
@@ -49,6 +52,7 @@ public class Entity
             {
                 grid[myX][myY].setEntity(null);
                 grid[myX][myY-1].setEntity(this);
+                myY--;
             }
         }
     }
@@ -63,14 +67,14 @@ public class Entity
         }
         if(dir==1)
         {
-            if(myY!=grid.length&&grid[myX][myY+1].canMove())
+            if(myY!=grid.length-1&&grid[myX][myY+1].canMove())
             {
                 return true;
             }
         }
         if(dir==2)
         {
-            if(myX!=grid.length&&grid[myX+1][myY].canMove())
+            if(myX!=grid.length-1&&grid[myX+1][myY].canMove())
             {
                 return true;
             }
