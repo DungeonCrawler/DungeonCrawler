@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=map\ row\ col
+comment0.target=Goblin(Tile[][],\ int,\ int)
+comment1.params=damageDealt
+comment1.target=void\ attacked(int)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=int\ dealDamage()
+numComments=4

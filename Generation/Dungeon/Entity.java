@@ -15,7 +15,23 @@ public class Entity
     }
     public String toString()
     {
-        return "@";
+        return "?";
+    }
+    public int getX()
+    {
+        return myX;
+    }
+    public int getY()
+    {
+        return myY;
+    }
+    public void setX(int num)
+    {
+        myX=num;
+    }
+    public void setY(int num)
+    {
+        myY=num;
     }
     public void move(int num)
     {
@@ -87,5 +103,9 @@ public class Entity
             }
         }
         return false;
+    }
+    public Tile[][] getGrid()
+    {
+        return grid;
     }
 }
