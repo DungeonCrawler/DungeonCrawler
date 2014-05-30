@@ -10,15 +10,16 @@ public class DoubleDaggers extends Weapon
         int damage=(int)(Math.random()*3)+6;
         return damage;
     }
-    public boolean canWield()
+     public int reqStr()
     {
-        if(p.getStrength()>=4&&p.getAgility()>=12)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return 4;
+    }
+    public int reqAgi()
+    {
+        return 12;
+    }
+     public int reqInt()
+    {
+        return 0;
     }
 }

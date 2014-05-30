@@ -1,6 +1,7 @@
 package ItemList.PlayerCharacter;
 import java.util.Scanner;
 import java.util.ArrayList;
+import ItemList.*;
 public class Player
 {
     private int hp;
@@ -9,10 +10,12 @@ public class Player
     private int smarts;
     private int defense;
     private String job;
+    ArrayList<Item> inventory=new ArrayList<Item>();
     public Player(String s)
     {
         job=s.toLowerCase();
     }
+
     public void getStats()
     {
         strength=(int)(Math.random()*5)+5;
@@ -45,47 +48,71 @@ public class Player
         System.out.println("Agility: " + agility);
         System.out.println("Intelligence: " + smarts);
     }
-    public ArrayList<String> startInventory()
+
+    public ArrayList<Item> startInventory()
     {
-        ArrayList<String> inventory=new ArrayList<String>();
         if(job.equals("m"))
         {
-            inventory.add("Initiate Robe");
-            inventory.add("Staff");
-            inventory.add("Spell Tome:Fireball");
+            inventory.add(new InitiateRobe());
+            inventory.add(new Staff());
+            //inventory.add("Spell Tome:Fireball");
         }
         if(job.equals("w"))
         {
-            inventory.add("Chain Mail");
-            inventory.add("Longsword");
+            inventory.add(new Chainmail());
+            inventory.add(new Longsword());
         }
         if(job.equals("r"))
         {
-            inventory.add("Leather Armor");
-            inventory.add("Shortsword");
-            inventory.add("Bow");
+            inventory.add(new LeatherArmor());
+            inventory.add(new Shortsword());
+            //inventory.add("Bow");
             //add ammo
         }
         return inventory;
     }
+
     public String getJob()
     {
         return job;
     }
+
     public int getHP()
     {
         return hp;    
     }
+
     public int getStrength()
     {
         return strength;
     }
+
     public int getAgility()
     {
         return agility;
     }
+
     public int getSmarts()
     {
         return smarts;
+    }
+
+    public boolean canWield()
+    {
+        for(int i=0; i<inventory.size(); i++)
+        {
+            if(inventory.get(i).type()=="weapon")
+            {
+                if((inventory.get(i).reqStr()<strength)&&(inventory.get(i).reqAgi()<agility))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

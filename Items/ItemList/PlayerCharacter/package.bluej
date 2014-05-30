@@ -1,8 +1,8 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=703
-package.editor.y=335
+package.editor.x=595
+package.editor.y=176
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
@@ -19,10 +19,10 @@ target1.type=ClassTarget
 target1.width=80
 target1.x=160
 target1.y=10
-target2.editor.height=700
+target2.editor.height=765
 target2.editor.width=900
-target2.editor.x=379
-target2.editor.y=368
+target2.editor.x=410
+target2.editor.y=126
 target2.height=50
 target2.name=Move
 target2.naviview.expanded=false

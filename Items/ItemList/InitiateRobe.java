@@ -25,4 +25,16 @@ public class InitiateRobe extends Armor
     {
         return 2;
     }   
+    public int reqStr()
+    {
+        return 0;
+    }
+    public int reqAgi()
+    {
+        return 0;
+    }
+     public int reqInt()
+    {
+        return 0;
+    }
 }

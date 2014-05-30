@@ -10,15 +10,16 @@ public class Greatsword extends Weapon
         int damage=(int)(Math.random()*3)+6;
         return damage;
     }
-    public boolean canWield()
+     public int reqStr()
     {
-        if(p.getStrength()>=14&&p.getAgility()>=5)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return 14;
+    }
+    public int reqAgi()
+    {
+        return 5;
+    }
+     public int reqInt()
+    {
+        return 0;
     }
 }

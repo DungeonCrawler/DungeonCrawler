@@ -10,15 +10,16 @@ public class Staff extends Weapon
         int damage=(int)(Math.random()*2)+1;
         return damage;
     }
-    public boolean canWield()
+    public int reqStr()
     {
-        if(p.getStrength()>=2&&p.getAgility()>=1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return 2;
+    }
+    public int reqAgi()
+    {
+        return 1;
+    }
+     public int reqInt()
+    {
+        return 0;
     }
 }

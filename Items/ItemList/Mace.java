@@ -10,15 +10,16 @@ public class Mace extends Weapon
         int damage=(int)(Math.random()*3)+4;
         return damage;
     }
-    public boolean canWield()
+    public int reqStr()
     {
-        if(p.getStrength()>=5&&p.getAgility()>=3)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return 9;
+    }
+    public int reqAgi()
+    {
+        return 3;
+    }
+     public int reqInt()
+    {
+        return 0;
     }
 }
