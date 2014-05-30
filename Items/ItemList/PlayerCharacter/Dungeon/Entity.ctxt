@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=map\ row\ col
+comment0.target=Entity(Dungeon.Tile[][],\ int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=num
+comment2.target=void\ move(int)
+comment3.params=dir
+comment3.target=boolean\ canMove(int)
+numComments=4

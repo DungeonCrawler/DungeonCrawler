@@ -2,7 +2,8 @@ package ItemList.PlayerCharacter;
 import java.util.Scanner;
 import java.util.ArrayList;
 import ItemList.*;
-public class Player
+import ItemList.PlayerCharacter.Dungeon.*;
+public class Player extends Entity
 {
     private int hp;
     private int strength;
@@ -11,9 +12,10 @@ public class Player
     private int defense;
     private String job;
     ArrayList<Item> inventory=new ArrayList<Item>();
-    public Player(String s)
+    public Player(Tile[][] map, int row, int col, String s)
     {
-        job=s.toLowerCase();
+        super(map, row, col);
+        job=s.toLowerCase();   
     }
 
     public void getStats()
@@ -110,6 +112,13 @@ public class Player
                 else
                 {
                     return true;
+                }
+            }
+            if(inventory.get(i).type()=="spell")
+            {
+                if(inventory.get(i).reqInt()<smarts)
+                {
+                    return false;
                 }
             }
         }

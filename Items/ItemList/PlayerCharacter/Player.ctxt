@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=s
-comment0.target=Player(java.lang.String)
+comment0.params=map\ row\ col\ s
+comment0.target=Player(Dungeon.Tile[][],\ int,\ int,\ java.lang.String)
 comment1.params=
 comment1.target=void\ getStats()
 comment2.params=
