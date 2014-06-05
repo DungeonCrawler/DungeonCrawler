@@ -20,6 +20,7 @@ public class TileTester
                 }
             }
         }
+        map[3][3]=new Door();
         int row=(int)(Math.random()*4)+1;
         int col=(int)(Math.random()*4)+1;
         Player e=new Player(map,row,col);

@@ -17,6 +17,7 @@ public abstract class Monster extends Entity{
         mediumAgility=5;
         largeAgility=10;
         superMassiveAgility=15;
+        loot=new String[1];
     }
 
     public void setHealth(int newHealth){

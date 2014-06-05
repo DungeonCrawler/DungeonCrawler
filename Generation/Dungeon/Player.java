@@ -47,6 +47,10 @@ public class Player extends Entity
                 Monster m=(Monster)gr[getX()-1][getY()].getEntity();
                 Combat.combat(m,this);
             }
+            else
+            {
+                gr[getX()-1][getY()].interact();
+            }
         }
         if(dir==1)//e
         {
@@ -60,6 +64,10 @@ public class Player extends Entity
             {
                 Monster m=(Monster)gr[getX()][getY()+1].getEntity();
                 Combat.combat(m,this);
+            }
+            else
+            {
+                gr[getX()][getY()+1].interact();
             }
         }
         if(dir==2)//s
@@ -75,6 +83,10 @@ public class Player extends Entity
                 Monster m=(Monster)gr[getX()+1][getY()].getEntity();
                 Combat.combat(m,this);
             }
+            else
+            {
+                gr[getX()+1][getY()].interact();
+            }
         }
         if(dir==3)//w
         {
@@ -88,6 +100,10 @@ public class Player extends Entity
             {
                 Monster m=(Monster)gr[getX()][getY()-1].getEntity();
                 Combat.combat(m,this);
+            }
+            else
+            {
+                gr[getX()][getY()-1].interact();
             }
         }
     }

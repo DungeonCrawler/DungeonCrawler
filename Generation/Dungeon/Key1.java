@@ -140,8 +140,10 @@ public class Key1 extends JFrame implements KeyListener{
                 }
                 System.out.println();
             }
-            for(int count=0;count<10;count++)
+        System.out.println("HP:" +e1.getHealth());
+        for(int count=0;count<10;count++)
             System.out.println();
+        
     }
     
     //public static void main(String[] args){

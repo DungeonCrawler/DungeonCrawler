@@ -108,4 +108,8 @@ public class Entity
     {
         return grid;
     }
+    public int getHealth()
+    {
+        return 0;
+    }
 }

@@ -17,4 +17,6 @@ comment7.params=dir
 comment7.target=boolean\ canMove(int)
 comment8.params=
 comment8.target=Tile[][]\ getGrid()
-numComments=9
+comment9.params=
+comment9.target=int\ getHealth()
+numComments=10

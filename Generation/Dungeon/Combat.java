@@ -14,6 +14,7 @@ public class Combat{
         }*/
         int player_damage=player.getDamage();
         int monster_damage=monster.dealDamage();
+        System.out.println(monster.getHealth());
         if(first){
             monster.attacked(player_damage);
             if(monster.getHealth()>0){
