@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TextDemo()
+comment1.params=evt
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=
+comment2.target=void\ createAndShowGUI()
+comment2.text=\r\n\ Create\ the\ GUI\ and\ show\ it.\ \ For\ thread\ safety,\r\n\ this\ method\ should\ be\ invoked\ from\ the\r\n\ event\ dispatch\ thread.\r\n
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+comment4.params=
+comment4.target=void\ run()
+numComments=5
