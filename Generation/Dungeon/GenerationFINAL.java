@@ -14,7 +14,7 @@ public class GenerationFINAL
     {
         Tile[][] level=new Tile[MAX_LENGTH][MAX_WIDTH];
         int center=MAX_LENGTH/2+1;
-        int count=0;
+        
         for(int i=center-6;i<center+3;i++)
         {
             for(int j=center-6;j<center+3;j++)

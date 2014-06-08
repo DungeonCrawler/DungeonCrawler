@@ -99,23 +99,23 @@ public class Key1 extends JFrame implements KeyListener{
         }
         if(e.getKeyCode()==numpad1){
             //set direction left
-            System.out.println("downLEFT");
-            //entity.move(3);
+            
+            move(6);
         }
         if(e.getKeyCode()==numpad3){
             //set direction right
-            System.out.println("downRIGHT");
-            //entity.move(1);
+            
+            move(5);
         }
         if(e.getKeyCode()==numpad7){
             //set direction down
-            System.out.println("upleft");
-            //entity.move(2);
+            
+            move(7);
         }
         if(e.getKeyCode()==numpad9){
             //set direction up
-            System.out.println("UPRight");
-            //entity.move(0);
+            
+            move(4);
         }
 
     }

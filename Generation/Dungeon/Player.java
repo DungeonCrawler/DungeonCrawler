@@ -106,5 +106,81 @@ public class Player extends Entity
                 gr[getX()][getY()-1].interact();
             }
         }
+        if(dir==4)//ne
+        {
+            if(canMove(4))
+            {
+                getGrid()[getX()][getY()].setEntity(null);
+                getGrid()[getX()-1][getY()+1].setEntity(this);
+                setY(getY()+1);
+                setX(getX()-1);
+            }
+            else if(gr[getX()-1][getY()+1].getEntity() instanceof Monster)
+            {
+                Monster m=(Monster)gr[getX()-1][getY()+1].getEntity();
+                Combat.combat(m,this);
+            }
+            else
+            {
+                gr[getX()-1][getY()+1].interact();
+            }
+        }
+        if(dir==5)//se
+        {
+            if(canMove(5))
+            {
+                getGrid()[getX()][getY()].setEntity(null);
+                getGrid()[getX()+1][getY()+1].setEntity(this);
+                setY(getY()+1);
+                setX(getX()+1);
+            }
+            else if(gr[getX()+1][getY()+1].getEntity() instanceof Monster)
+            {
+                Monster m=(Monster)gr[getX()+1][getY()+1].getEntity();
+                Combat.combat(m,this);
+            }
+            else
+            {
+                gr[getX()+1][getY()+1].interact();
+            }
+        }
+        if(dir==6)//sw
+        {
+            if(canMove(6))
+            {
+                getGrid()[getX()][getY()].setEntity(null);
+                getGrid()[getX()+1][getY()-1].setEntity(this);
+                setY(getY()-1);
+                setX(getX()+1);
+            }
+            else if(gr[getX()+1][getY()-1].getEntity() instanceof Monster)
+            {
+                Monster m=(Monster)gr[getX()+1][getY()-1].getEntity();
+                Combat.combat(m,this);
+            }
+            else
+            {
+                gr[getX()+1][getY()-1].interact();
+            }
+        }
+        if(dir==7)//nw
+        {
+            if(canMove(7))
+            {
+                getGrid()[getX()][getY()].setEntity(null);
+                getGrid()[getX()-1][getY()-1].setEntity(this);
+                setY(getY()-1);
+                setX(getX()-1);
+            }
+            else if(gr[getX()-1][getY()-1].getEntity() instanceof Monster)
+            {
+                Monster m=(Monster)gr[getX()-1][getY()-1].getEntity();
+                Combat.combat(m,this);
+            }
+            else
+            {
+                gr[getX()-1][getY()-1].interact();
+            }
+        }
     }
 }

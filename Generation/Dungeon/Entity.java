@@ -74,30 +74,58 @@ public class Entity
     }
     public boolean canMove(int dir)
     {
-        if(dir==0)
+        if(dir==0)//n
         {
             if(myX!=0&&grid[myX-1][myY].canMove())
             {
                 return true;
             }
         }
-        if(dir==1)
+        if(dir==1)//e
         {
             if(myY!=grid.length-1&&grid[myX][myY+1].canMove())
             {
                 return true;
             }
         }
-        if(dir==2)
+        if(dir==2)//s
         {
             if(myX!=grid.length-1&&grid[myX+1][myY].canMove())
             {
                 return true;
             }
         }
-        if(dir==3)
+        if(dir==3)//w
         {
             if(myY!=0&&grid[myX][myY-1].canMove())
+            {
+                return true;
+            }
+        }
+        if(dir==4)//ne
+        {
+            if(myY!=0&&myX!=grid.length-1&&grid[myX-1][myY+1].canMove())
+            {
+                return true;
+            }
+        }
+        if(dir==5)//se
+        {
+            if(myY!=grid.length-1&&myX!=grid.length-1&&grid[myX+1][myY+1].canMove())
+            {
+                return true;
+            }
+        }
+        if(dir==6)//sw
+        {
+            if(myY!=0&&myX!=grid.length-1&&grid[myX+1][myY-1].canMove())
+            {
+                return true;
+            }
+        }
+        if(dir==7)//nw
+        {
+            if(myY!=0&&myX!=0&&grid[myX-1][myY-1].canMove())
             {
                 return true;
             }
