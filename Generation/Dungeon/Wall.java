@@ -2,9 +2,12 @@ package Dungeon;
 
 public class Wall extends Tile
 {
-    public Wall()
+    private int row;
+    private int col;
+    public Wall(int x,int y)
     {
-        
+        row=y;
+        col=x;
     }
     public boolean canMove()
     {
@@ -17,5 +20,13 @@ public class Wall extends Tile
     public String toString()
     {
         return "#";
+    }
+    public int getX()
+    {
+        return col;
+    }
+    public int getY()
+    {
+        return row;
     }
 }

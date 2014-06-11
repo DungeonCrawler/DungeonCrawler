@@ -1,10 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Wall()
+comment0.params=x\ y
+comment0.target=Wall(int,\ int)
 comment1.params=
 comment1.target=boolean\ canMove()
 comment2.params=
 comment2.target=boolean\ canSee()
 comment3.params=
 comment3.target=java.lang.String\ toString()
-numComments=4
+comment4.params=
+comment4.target=int\ getX()
+comment5.params=
+comment5.target=int\ getY()
+numComments=6
