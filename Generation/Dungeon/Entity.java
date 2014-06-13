@@ -21,6 +21,10 @@ public class Entity
     {
         return myX;
     }
+    public void setGrid(Tile[][] map)
+    {
+        grid=map;
+    }
     public int getY()
     {
         return myY;

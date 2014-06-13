@@ -1,11 +1,13 @@
 package Dungeon;
 public class Goblin extends Monster{
-    public Goblin(Tile[][] map,int row,int col){
+    private Player player;
+    public Goblin(Tile[][] map,int row,int col,Player p){
         super(map,row,col);
-        setStrength((int)(Math.random()*3)+1);
+        setStrength((int)(Math.random()*3)+2);
         setSize("small");
-        setDefense(5+(int)(Math.random()*2));
+        setDefense(3+(int)(Math.random()*2));
         setHealth(super.getStrength()/2);
+        player=p;
     }
 
     public void attacked(int damageDealt){
@@ -17,6 +19,7 @@ public class Goblin extends Monster{
                 System.out.println(super.getLoot()[i]);
             }*/
             this.getGrid()[getX()][getY()].setEntity(null);
+            player.kill();
         }
         else{
             System.out.println("Squeeeeeeeeaaaak!!!!!!!!!");

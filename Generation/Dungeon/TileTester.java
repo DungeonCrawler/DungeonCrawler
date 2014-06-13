@@ -13,7 +13,7 @@ public class TileTester
         map[row][col].setEntity(e);
         row=(int)(Math.random()*4)+1;
         col=(int)(Math.random()*4)+1;
-        Goblin g=new Goblin(map,row,col);
+        Goblin g=new Goblin(map,row,col,e);
         map[row][col].setEntity(g);
         for(int i=0;i<map.length;i++)
         {
@@ -56,6 +56,6 @@ public class TileTester
             }
         }
         map[3][3]=new Door();
-        map[4][4]=new Stairs();
+        //map[4][4]=new Stairs();
     }
 }

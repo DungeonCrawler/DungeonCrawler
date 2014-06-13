@@ -4,11 +4,17 @@ public class Player extends Entity
 {
     private int health;
     private int damage;
+    private int level;
+    private int kills;
+    private int mobs;
     public Player(Tile[][] grid, int row, int col)
     {
         super(grid, row, col);
         damage=(int)(Math.random()*5)+5;
         health=10+(int)(Math.random()*5);
+        level=1;
+        kills=0;
+        
     }
     public String toString()
     {
@@ -31,6 +37,34 @@ public class Player extends Entity
         System.out.print("You lose.");
         System.exit(0);
     }
+    public int getLevel()
+    {
+        return level;
+    }
+    public void levelUp()
+    {
+        level++;
+    }
+    public void kill()
+    {
+        kills++;
+    }
+    public int getKills()
+    {
+        return kills;
+    }
+    public void resetKills()
+    {
+        kills=0;
+    }
+    public void setMobs(int num)
+    {
+        mobs=num;
+    }
+    public int getMobs()
+    {
+        return mobs;
+    }
     public void move(int dir)
     {
         Tile[][] gr=getGrid();
@@ -49,7 +83,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()-1][getY()].interact();
+                gr[getX()-1][getY()].interact(this);
             }
         }
         if(dir==1)//e
@@ -67,7 +101,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()][getY()+1].interact();
+                gr[getX()][getY()+1].interact(this);
             }
         }
         if(dir==2)//s
@@ -85,7 +119,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()+1][getY()].interact();
+                gr[getX()+1][getY()].interact(this);
             }
         }
         if(dir==3)//w
@@ -103,7 +137,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()][getY()-1].interact();
+                gr[getX()][getY()-1].interact(this);
             }
         }
         if(dir==4)//ne
@@ -122,7 +156,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()-1][getY()+1].interact();
+                gr[getX()-1][getY()+1].interact(this);
             }
         }
         if(dir==5)//se
@@ -141,7 +175,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()+1][getY()+1].interact();
+                gr[getX()+1][getY()+1].interact(this);
             }
         }
         if(dir==6)//sw
@@ -160,7 +194,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()+1][getY()-1].interact();
+                gr[getX()+1][getY()-1].interact(this);
             }
         }
         if(dir==7)//nw
@@ -179,7 +213,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()-1][getY()-1].interact();
+                gr[getX()-1][getY()-1].interact(this);
             }
         }
     }

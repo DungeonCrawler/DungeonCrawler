@@ -7,9 +7,9 @@ public class GenerationFINAL
 
     }
     //use odd numbers to have a distinct center point
-    public static final int MAX_LENGTH=101;
+    public static final int MAX_LENGTH=73;
     public static final int MAX_WIDTH=MAX_LENGTH;
-    public static final int NUMBER_OF_ROOMS=7;
+    public static final int NUMBER_OF_ROOMS=10;
     private static ArrayList<Wall> walls;
     public static Tile[][] writeLevel()
     {
@@ -38,15 +38,11 @@ public class GenerationFINAL
         {
           rooms+=addRoom(level);
         }
-        //rooms+=addRoom(level);
-        Player p=new Player(level,49,49);
-        level[49][49].setEntity(p);
-        Key1 k=new Key1(p,level);
-        printArray(level);
+        rooms+=addRoom(level);
         return level;
     }
 
-    public static void printArray(Tile[][] level)
+    public static void printArray(Tile[][] level, Player p)
     {
         for(int i=0;i<MAX_LENGTH;i++)
         {
@@ -56,9 +52,8 @@ public class GenerationFINAL
                     System.out.print(level[i][j]);
                 else
                 {
-                    System.out.print("O");
-                    //level[i][j]=new Wall(i,j);
-                    //System.out.print(level[i][j]);
+                    level[i][j]=new InnerWall(i,j);
+                    System.out.print(level[i][j]);
                 }
             }
             System.out.println();
@@ -235,7 +230,7 @@ public class GenerationFINAL
                     for(int j=col-size;j<col+size;j++)
                     {
                         System.out.println("case 3");
-                        if(i==col-size||i==col+size-1||j==row||j==row-(size*2))
+                        if(j==col-size||j==col+size-1||i==row||i==row-(size*2))
                         {
                             if(level[i][j]==null)
                             {
@@ -258,4 +253,6 @@ public class GenerationFINAL
 
         return 0;
     }
+    
+    
 }

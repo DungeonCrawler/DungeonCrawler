@@ -17,9 +17,10 @@ public class Combat{
         //System.out.println(monster.getHealth());
         if(first){
             monster.attacked(player_damage);
-            if(monster.getHealth()>0){
+            if(monster.getHealth()>=0){
                 player.takeDamage(monster_damage);
             }
+            
         }
         else{
           player.takeDamage(monster_damage);

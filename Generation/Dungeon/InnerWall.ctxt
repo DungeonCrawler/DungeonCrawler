@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=row\ col
+comment0.target=InnerWall(int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=boolean\ canMove()
+comment3.params=
+comment3.target=boolean\ canSee()
+comment4.params=
+comment4.target=int\ getX()
+comment5.params=
+comment5.target=int\ getY()
+numComments=6

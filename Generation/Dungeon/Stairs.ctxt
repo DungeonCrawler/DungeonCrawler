@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Stairs()
+comment0.params=monsters
+comment0.target=Stairs(int)
 comment1.params=
 comment1.target=boolean\ canMove()
 comment2.params=
 comment2.target=boolean\ canSee()
-comment3.params=
-comment3.target=void\ interact()
+comment3.params=p\ k
+comment3.target=void\ interact(Player,\ Key1)
 comment4.params=
 comment4.target=java.lang.String\ toString()
 numComments=5

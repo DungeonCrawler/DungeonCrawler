@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=map\ row\ col
-comment0.target=Goblin(Tile[][],\ int,\ int)
+comment0.params=map\ row\ col\ p
+comment0.target=Goblin(Tile[][],\ int,\ int,\ Player)
 comment1.params=damageDealt
 comment1.target=void\ attacked(int)
 comment2.params=
