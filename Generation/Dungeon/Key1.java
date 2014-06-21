@@ -39,6 +39,10 @@ public class Key1 extends JFrame implements KeyListener{
     {
         e1=p;
     }
+    public Player getPlayer()
+    {
+        return e1;
+    }
     //Called when the key is pressed down.
 
     public void keyPressed(KeyEvent e){
@@ -146,7 +150,7 @@ public class Key1 extends JFrame implements KeyListener{
                 }
                 System.out.println();
             }
-        System.out.println("HP:" +e1.getHealth()+"Mobs: "+e1.getKills()+"/"+e1.getMobs());
+        System.out.println("HP:" +e1.getHealth()+" Mobs: "+e1.getKills()+"/"+e1.getMobs());
         
         
     }

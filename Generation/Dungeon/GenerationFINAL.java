@@ -42,6 +42,25 @@ public class GenerationFINAL
         return level;
     }
 
+    public static String returnArray(Tile[][] level, Player p)
+    {
+        String s="";
+        for(int i=0;i<MAX_LENGTH;i++)
+        {
+            for(int j=0;j<MAX_LENGTH;j++)
+            {
+                if(level[i][j]!=null)
+                    s+=level[i][j].toString();
+                else
+                {
+                    level[i][j]=new InnerWall(i,j);
+                    s+=level[i][j].toString();
+                }
+            }
+            s+="\n";
+        }
+        return s;
+    } 
     public static void printArray(Tile[][] level, Player p)
     {
         for(int i=0;i<MAX_LENGTH;i++)
@@ -58,35 +77,34 @@ public class GenerationFINAL
             }
             System.out.println();
         }
-    } 
-
+    }
     public static int addRoom(Tile[][] level)
     {
         int seed=(int)(Math.random()*walls.size());
-        System.out.println("It ran the method");
+        //System.out.println("It ran the method");
         int col=walls.get(seed).getX();
         int row=walls.get(seed).getY();
         int size=(int)(Math.random()*4)+3;//distance out from center
         
-        System.out.println("case 1");
+        //System.out.println("case 1");
         
         if(level[row-1][col] instanceof Wall &&level[row+1][col] instanceof Wall)//room horizontal
         {
-            System.out.println("case 1.5");
+            //System.out.println("case 1.5");
             if(level[row][col-1] instanceof Floor)//make room right
             {
                 for(int i=row-size;i<row+size;i++)
                 {
                     for(int j=col;j<col+(size*2)+1;j++)
                     {
-                        System.out.println("case 2r");
+                        //System.out.println("case 2r");
                         if(level[i][j]==null||level[i][j] instanceof Wall)
                         {
                             break;
                         }
                         else
                         {
-                            System.out.println("case Break");
+                            //System.out.println("case Break");
                             return 0;
                         }
                     }
@@ -96,7 +114,7 @@ public class GenerationFINAL
                 {
                     for(int j=col;j<col+(size*2)+1;j++)
                     {
-                        System.out.println("case 3");
+                        //System.out.println("case 3");
                         if(i==row-size||i==row+size-1||j==col||j==col+(2*size))
                         {
                             if(level[i][j]==null)
@@ -122,14 +140,14 @@ public class GenerationFINAL
                 {
                     for(int j=col-(2*size);j<=col;j++)
                     {
-                        System.out.println("case 2l");
+                        //System.out.println("case 2l");
                         if(level[i][j]==null||level[i][j] instanceof Wall)
                         {
                             break;
                         }
                         else
                         {
-                            System.out.println("case Break");
+                            //System.out.println("case Break");
                             return 0;
                         }
                     }
@@ -139,7 +157,7 @@ public class GenerationFINAL
                 {
                     for(int j=col-(2*size);j<=col;j++)
                     {
-                        System.out.println("case 3");
+                        //System.out.println("case 3");
                         if(i==row-size||i==row+size-1||j==col||j==col-(2*size))
                         {
                             if(level[i][j]==null)
@@ -162,12 +180,12 @@ public class GenerationFINAL
         }
         else if(level[row][col-1] instanceof Wall &&level[row][col+1] instanceof Wall)//room vertical
         {
-            System.out.println("case 1.5");
+            //System.out.println("case 1.5");
             if(level[row-1][col] instanceof Floor)//make room down
             {
                 for(int i=row;i<row+(2*size)+1;i++)
                 {
-                    System.out.println("case 2d");
+                    //System.out.println("case 2d");
                     for(int j=col-size;j<col+size;j++)
                     {
                         if(level[i][j]==null||level[i][j] instanceof Wall)
@@ -176,7 +194,7 @@ public class GenerationFINAL
                         }
                         else
                         {
-                            System.out.println("case Break");
+                            //System.out.println("case Break");
                             return 0;
                         }
                     }
@@ -184,7 +202,7 @@ public class GenerationFINAL
                 //build-on!
                 for(int i=row;i<row+(2*size);i++)
                 {
-                    System.out.println("case 3");
+                    //System.out.println("case 3");
                     for(int j=col-size;j<col+size;j++)
                     {
                         if(j==col-size||j==col+size-1||i==row||i==row+(2*size)-1)
@@ -212,14 +230,14 @@ public class GenerationFINAL
                 {
                     for(int j=col-size;j<col+size;j++)
                     {
-                        System.out.println("case 2u");
+                        //System.out.println("case 2u");
                         if(level[i][j]==null||level[i][j] instanceof Wall)
                         {
                             break;
                         }
                         else
                         {
-                            System.out.println("case Break");
+                            //System.out.println("case Break");
                             return 0;
                         }
                     }
@@ -229,7 +247,7 @@ public class GenerationFINAL
                 {
                     for(int j=col-size;j<col+size;j++)
                     {
-                        System.out.println("case 3");
+                        //System.out.println("case 3");
                         if(j==col-size||j==col+size-1||i==row||i==row-(size*2))
                         {
                             if(level[i][j]==null)

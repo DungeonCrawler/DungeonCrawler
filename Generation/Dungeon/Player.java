@@ -7,6 +7,7 @@ public class Player extends Entity
     private int level;
     private int kills;
     private int mobs;
+    private Key1 k;
     public Player(Tile[][] grid, int row, int col)
     {
         super(grid, row, col);
@@ -15,6 +16,10 @@ public class Player extends Entity
         level=1;
         kills=0;
         
+    }
+    public void setK(Key1 key)
+    {
+        k=key;
     }
     public String toString()
     {
@@ -44,6 +49,7 @@ public class Player extends Entity
     public void levelUp()
     {
         level++;
+        System.out.println("LEVELUP!");
     }
     public void kill()
     {
@@ -83,7 +89,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()-1][getY()].interact(this);
+                gr[getX()-1][getY()].interact(k);
             }
         }
         if(dir==1)//e
@@ -101,7 +107,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()][getY()+1].interact(this);
+                gr[getX()][getY()+1].interact(k);
             }
         }
         if(dir==2)//s
@@ -119,7 +125,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()+1][getY()].interact(this);
+                gr[getX()+1][getY()].interact(k);
             }
         }
         if(dir==3)//w
@@ -137,7 +143,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()][getY()-1].interact(this);
+                gr[getX()][getY()-1].interact(k);
             }
         }
         if(dir==4)//ne
@@ -156,7 +162,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()-1][getY()+1].interact(this);
+                gr[getX()-1][getY()+1].interact(k);
             }
         }
         if(dir==5)//se
@@ -175,7 +181,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()+1][getY()+1].interact(this);
+                gr[getX()+1][getY()+1].interact(k);
             }
         }
         if(dir==6)//sw
@@ -194,7 +200,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()+1][getY()-1].interact(this);
+                gr[getX()+1][getY()-1].interact(k);
             }
         }
         if(dir==7)//nw
@@ -213,7 +219,7 @@ public class Player extends Entity
             }
             else
             {
-                gr[getX()-1][getY()-1].interact(this);
+                gr[getX()-1][getY()-1].interact(k);
             }
         }
     }

@@ -32,7 +32,7 @@ public class Door extends Tile
         return false;
     }
 
-    public void interact(Player p)
+    public void interact(Key1 k)
     {
         isOpen=true;
     }

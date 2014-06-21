@@ -8,7 +8,7 @@ public abstract class Tile
     }
     public abstract boolean canMove();
     public abstract boolean canSee();
-    public void interact(Player p)
+    public void interact(Key1 k)
     {
         
     }

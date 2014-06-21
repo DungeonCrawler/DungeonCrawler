@@ -10,7 +10,8 @@ public class Game
         int center=level.length/2+1;
         Player p=new Player(level,center,center);
         level[center][center].setEntity(p);
-        Key1 k=new Key1(p,level); 
+        Key1 k=new Key1(p,level);
+        p.setK(k);
         int numGoblins=(int)(Math.random()*3+p.getLevel());
         p.setMobs(numGoblins);
         for(int i=0;i<numGoblins;i++)
