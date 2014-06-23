@@ -6,10 +6,11 @@ import javax.swing.*;
 
 public class Key1 extends JFrame implements KeyListener{
 
-    JTextField KeyCodeT = new JTextField("Key Code:");//A Text Field that will display the key code.
+    JTextField KeyCodeT;//A Text Field that will display the key code.
     private int count, Right_Key, Left_Key, Down_Key, Up_Key;
     Player e1;
     Tile[][] map;
+    String sMap;
     public final static int numpad1 = KeyEvent.VK_NUMPAD1;
     public final static int numpad2 = KeyEvent.VK_NUMPAD2;
     public final static int numpad3 = KeyEvent.VK_NUMPAD3;
@@ -22,6 +23,8 @@ public class Key1 extends JFrame implements KeyListener{
     public Key1(Player e, Tile[][] grid){
         e1=e;
         map=grid;
+        sMap=GenerationFINAL.returnArray(map,e1);
+        KeyCodeT = new JTextField(sMap);
         KeyCodeT.addKeyListener(this);//Listens for key inputs in the text field
 
         KeyCodeT.setEditable(false);//disallow user input into the Text field.

@@ -7,7 +7,7 @@ public class GenerationFINAL
 
     }
     //use odd numbers to have a distinct center point
-    public static final int MAX_LENGTH=73;
+    public static final int MAX_LENGTH=65;
     public static final int MAX_WIDTH=MAX_LENGTH;
     public static final int NUMBER_OF_ROOMS=10;
     private static ArrayList<Wall> walls;
